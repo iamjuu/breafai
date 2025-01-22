@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {Logo} from '../../assets'
 const Navbar = () => {
   return (
-    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[500px]">
+    <div className="fixed  bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[500px]">
       <nav className="w-full p-2 bg-gray-900 text-white rounded-t-lg">
         <ul className="flex w-full  border-b border-b-gray-600 border-dotted  justify-around">
           <div className="flex flex-col items-center group">

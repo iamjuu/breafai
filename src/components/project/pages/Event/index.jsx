@@ -3,18 +3,23 @@ import {
   Share2,
   Clock,
   Calendar,
-  Download,
   Heart,
   Bookmark,
   Copy,
-  Share,
-  ClipboardList,
   FileType,
   Twitter,
   Sparkles,
   RefreshCw,
 } from "lucide-react";
-import { Calander, Chat, Chat1, Folder,OverView,Takeaway } from "../../../../assets";
+import {
+  Calander,
+  Chat,
+  Chat1,
+  Folder,
+  OverView,
+  Takeaway,
+  Share,Download,Leftarrow
+} from "../../../../assets";
 const EventDetailsPage = () => {
   const [activeTab, setActiveTab] = useState("Overview");
   const [isTwitter, setTwitter] = useState(false);
@@ -42,36 +47,50 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-        <div className="flex gap-[8px]">  <span><img className="w-[26px]" src={OverView} alt="" /></span> <p style={{fontSize:'16px',fontWeight:'500'}}>Overview</p></div>
-        <div className="bg-[#282C3A] p-6 rounded-lg max-w-lg">
-          <p style={{fontSize:'14px'}} className="text-[#CDD0D5] mb-8 leading-relaxed">
-            EventHex stands out by tackling two key challenges that traditional
-            event management often struggles with: creating personalized
-            experiences and ensuring attendee retention. This platform is built
-            to streamline even
-          </p>
-          <div  style={{borderRadius:'16px'}} className="mb-8 p-3  bg-[#222534]">
-            <h3 className="text-white text-lg mb-4">Session Highlights</h3>
-            <ul className=" flex flex-col  text-left space-y-3">
-              {highlights.map((highlight, index) => (
-                <li key={index} className="flex w-full justify-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
-                  <span className="text-gray-300">{highlight}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="flex gap-[8px]">
+            {" "}
+            <span>
+              <img className="w-[26px]" src={OverView} alt="" />
+            </span>{" "}
+            <p style={{ fontSize: "16px", fontWeight: "500" }}>Overview</p>
           </div>
-          <div className="flex gap-4">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
-              <Share className="w-4 h-4" />
-              <span>Share</span>
-            </button>
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
-              <Download className="w-4 h-4" />
-              <span>Download</span>
-            </button>
+          <div className="bg-[#282C3A] p-3 rounded-lg max-w-lg">
+            <p
+              style={{ fontSize: "14px" }}
+              className="text-[#CDD0D5] mb-8 leading-relaxed"
+            >
+              EventHex stands out by tackling two key challenges that
+              traditional event management often struggles with: creating
+              personalized experiences and ensuring attendee retention. This
+              platform is built to streamline even
+            </p>
+            <div
+              style={{ borderRadius: "16px" }}
+              className="mb-8 p-3  bg-[#222534]"
+            >
+              <h3 className="text-white text-lg mb-4">Session Highlights</h3>
+              <ul className=" flex flex-col  text-left space-y-3">
+                {highlights.map((highlight, index) => (
+                  <li key={index} className="flex w-full justify-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
+                    <span className="text-gray-300">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex gap-4">
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
+                {/* <Share className="w-4 h-4" /> */}
+                <img src={Share} alt="" />
+                <span>Share</span>
+              </button>
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
+                {/* <Download className="w-4 h-4" /> */}
+                <img src={Download} alt="" />
+                <span>Download</span>
+              </button>
+            </div>
           </div>
-        </div>
         </>
       ),
     },
@@ -79,36 +98,47 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-        <div className="flex gap-[8px]">  <span><img className="w-[26px]" src={OverView} alt="" /></span> <p style={{fontSize:'16px',fontWeight:'500'}}>Overview</p></div>
-        <div className="bg-[#282C3A] p-6 rounded-lg max-w-lg">
-          <p className="text-gray-300 mb-8 leading-relaxed">
-            EventHex stands out by tackling two key challenges that traditional
-            event management often struggles with: creating personalized
-            experiences and ensuring attendee retention. This platform is built
-            to streamline even
-          </p>
-          <div  style={{borderRadius:'16px'}} className="mb-8 p-3  bg-[#222534]">
-            <h3 className="text-white text-lg mb-4">Session Highlights</h3>
-            <ul className=" flex flex-col  text-left space-y-3">
-              {highlights.map((highlight, index) => (
-                <li key={index} className="flex w-full justify-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
-                  <span className="text-gray-300">{highlight}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="flex gap-[8px]">
+            {" "}
+            <span>
+              <img className="w-[26px]" src={OverView} alt="" />
+            </span>{" "}
+            <p style={{ fontSize: "16px", fontWeight: "500" }}>Overview</p>
           </div>
-          <div className="flex gap-4">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
-              <Share className="w-4 h-4" />
-              <span>Share</span>
-            </button>
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
-              <Download className="w-4 h-4" />
-              <span>Download</span>
-            </button>
+          <div className="bg-[#282C3A] p-3 rounded-lg max-w-lg">
+            <p className="text-gray-300 mb-8 leading-relaxed">
+              EventHex stands out by tackling two key challenges that
+              traditional event management often struggles with: creating
+              personalized experiences and ensuring attendee retention. This
+              platform is built to streamline even
+            </p>
+            <div
+              style={{ borderRadius: "16px" }}
+              className="mb-8 p-3  bg-[#222534]"
+            >
+              <h3 className="text-white text-lg mb-4">Session Highlights</h3>
+              <ul className=" flex flex-col  text-left space-y-3">
+                {highlights.map((highlight, index) => (
+                  <li key={index} className="flex w-full justify-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
+                    <span className="text-gray-300">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex gap-4">
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
+                {/* <Share className="w-4 h-4" /> */}
+                <img src={Share} alt="" />
+                <span>Share</span>
+              </button>
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 text-cyan-400 hover:bg-gray-800 transition-colors">
+                {/* <Download className="w-4 h-4" /> */}
+                <img src={Download} alt="" />
+                <span>Download</span>
+              </button>
+            </div>
           </div>
-        </div>
         </>
       ),
     },
@@ -118,42 +148,81 @@ const EventDetailsPage = () => {
     {
       name: "Take Away 1",
       content: (
-<>
-        <div className="flex gap-[8px]"> <span><img className="w-[26px]" src={Takeaway} alt="" /></span> <p style={{fontSize:'16px',fontWeight:'500'}}>Ai Generated Insights</p> </div>
-        <div style={{borderRadius:'16px'}} className="bg-[#282C3A] rounded-lg p-4 mb-4">
-          <div className="text-sm text-gray-300 mb-3 flex justify-between items-center">
-          
-            
+        <>
+          <div className="flex gap-[8px]">
+            {" "}
+            <span>
+              <img className="w-[26px]" src={Takeaway} alt="" />
+            </span>{" "}
+            <p style={{ fontSize: "16px", fontWeight: "500" }}>
+              Ai Generated Insights
+            </p>{" "}
           </div>
-          <h2 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
-            <span className="text-yellow-400">👉</span>
-            Cross-Border Payment Innovations Creating Key Challenges
-          </h2>
-          <p className="text-gray-300 mb-4 text-sm">
-            EventHex stands out by tackling two key challenges that traditional
-            event management often struggles with: creating personalized
-            experiences and ensuring attendee retention. This platform is built
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="text-cyan-400 text-sm">#AIGen</span>
-            <span className="text-cyan-400 text-sm">#Prediction</span>
-            <span className="text-cyan-400 text-sm">#Strategy</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <button className="flex items-center gap-1 text-gray-400 hover:text-gray-300">
-              <Heart className="w-4 h-4" />
-              <span>like</span>
-            </button>
-            <div className="flex gap-3">
-              <button className="text-gray-400 hover:text-gray-300">
-                <Share className="w-4 h-4" />
+          <div
+            style={{ borderRadius: "16px" }}
+            className="bg-[#282C3A] rounded-lg p-4 mb-4"
+          >
+            <div className="text-sm text-gray-300 mb-3 flex justify-between items-center"></div>
+            <h2 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
+              <span className="text-yellow-400">👉</span>
+              Cross-Border Payment Innovations Creating Key Challenges
+            </h2>
+            <p className="text-gray-300 mb-4 text-sm">
+              EventHex stands out by tackling two key challenges that
+              traditional event management often struggles with: creating
+              personalized experiences and ensuring attendee retention. This
+              platform is built
+            </p>
+            <div className="flex flex-wrap gap-2   mb-4">
+              <div
+                style={{ borderRadius: "7px" }}
+                className=" flex justify-center items-center bg-gray-900  "
+              >
+                <span
+                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  className="text-white p-2"
+                >
+                  #AIGen
+                </span>
+              </div>
+              <div
+                style={{ borderRadius: "7px" }}
+                className=" flex justify-center items-center bg-gray-900  "
+              >
+                <span
+                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  className="text-white p-2"
+                >
+                  #Prediction
+                </span>
+              </div>
+              <div
+                style={{ borderRadius: "7px" }}
+                className=" flex justify-center items-center bg-gray-900  "
+              >
+                <span
+                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  className="text-white p-2"
+                >
+                  #Strategy 
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-between items-center">
+              <button className="flex items-center gap-1 text-gray-400 hover:text-gray-300">
+                <Heart className=" text-[#5BF5FF] w-4 h-4" />
+                <span>33</span>
               </button>
-              <button className="text-gray-400 hover:text-gray-300">
-                <Bookmark className="w-4 h-4" />
-              </button>
+              <div className="flex gap-3">
+                <button className="text-gray-400 hover:text-gray-300">
+                  {/* <Share className="w-4 h-4" /> */}
+                </button>
+                <button className="text-gray-400 hover:text-gray-300">
+                  <Bookmark className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
         </>
       ),
     },
@@ -192,7 +261,8 @@ const EventDetailsPage = () => {
             </button>
             <div className="flex gap-3">
               <button className="text-gray-400 hover:text-gray-300">
-                <Share className="w-4 h-4" />
+                {/* <Share className="w-4 h-4" /> */}
+                <img src={Share} alt="" />
               </button>
               <button className="text-gray-400 hover:text-gray-300">
                 <Bookmark className="w-4 h-4" />
@@ -237,7 +307,8 @@ const EventDetailsPage = () => {
             </button>
             <div className="flex gap-3">
               <button className="text-gray-400 hover:text-gray-300">
-                <Share className="w-4 h-4" />
+                {/* <Share className="w-4 h-4" /> */}
+                <img src={Share} alt="" />
               </button>
               <button className="text-gray-400 hover:text-gray-300">
                 <Bookmark className="w-4 h-4" />
@@ -311,7 +382,8 @@ const EventDetailsPage = () => {
                 {/* Footer */}
                 <div className="flex gap-3">
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
-                    <Share className="w-4 h-4" />
+                    {/* <Share className="w-4 h-4" /> */}
+                    <img src={Share} alt="" />
                     <span>Share</span>
                   </button>
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
@@ -349,7 +421,8 @@ const EventDetailsPage = () => {
                 {/* Footer */}
                 <div className="flex gap-3">
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
-                    <Share className="w-4 h-4" />
+                    {/* <Share className="w-4 h-4" /> */}
+                    <img src={Share} alt="" />
                     <span>Share</span>
                   </button>
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
@@ -364,7 +437,8 @@ const EventDetailsPage = () => {
 
           <div className="flex gap-3">
             <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
-              <Share className="w-4 h-4" />
+              {/* <Share className="w-4 h-4" /> */}
+              <img src={Share} alt="" />
               <span>Share</span>
             </button>
             <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-cyan-400 hover:bg-gray-700 transition-colors">
@@ -393,7 +467,7 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <Download className="w-5 h-5" />
+            <img src={Download} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
@@ -409,7 +483,7 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <Download className="w-5 h-5" />
+            <img src={Download} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
@@ -425,7 +499,7 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <Download className="w-5 h-5" />
+            <img src={Download} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
@@ -441,7 +515,7 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <Download className="w-5 h-5" />
+            <img src={Download} alt="" />
             </button>
           </div>
         </div>
@@ -466,41 +540,46 @@ const EventDetailsPage = () => {
 
   return (
     <div className="w-full max-w-[500px] min-h-screen">
-      <div className="w-full max-w-md bg-gray-900 min-h-screen">
-        <div className="p-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white">
-          <button className="mb-4">
-            <span className="text-2xl">←</span>
+      <div className="w-full max-w-md bg-gray-900 p-5  min-h-screen">
+        <div  style={{
+          borderRadius:'16px',
+          // height:'175px',
+            background: "linear-gradient(to bottom right, #D5F8FF, #75EEFF, #0052D4)",
+        }} className="p-4  text-white">
+          <button >
+            <img className="bg-gray-200 p-1 rounded-full" src={Leftarrow} alt="" />
           </button>
-          <h1 className="text-2xl font-bold mb-4">
+          <h1 style={{fontSize:'16px',fontWeight:'500'}} className=" text-black  font-bold mb-4">
             Shaping the Financial Ecosystem of the Future
           </h1>
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center  border-t pt-2 gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden">
               <div className="w-full h-full bg-gray-300"></div>
             </div>
             <div>
-              <h2 className="font-semibold">Safari Sanders Dennyes</h2>
-              <p className="text-sm opacity-90">
+              <h2 style={{fontSize:'14px'}} className=" text-black  font-semibold">Safari Sanders Dennyes</h2>
+              <p style={{fontSize:'12px'}} className="text-black opacity-90">
                 AI Research Director, Tecnosys
               </p>
             </div>
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span className="text-sm">Jan 17, 2025</span>
+              <Calendar  style={{fontWeight:'100'}} className=" text-black  w-4 h-4" />
+              <span className= " text-black text-sm">Jan 17, 2025</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span className="text-sm">45 min</span>
+              <Clock className=" text-black w-4 h-4" />
+              <span className=" text-black text-sm">45 min</span>
             </div>
             <div className="ml-auto">
-              <Share2 className="w-5 h-5" />
+              {/* <Share2 className="w-5 h-5" /> */}
+              <img  style={{color:'black'}} src={Share} alt="" />
             </div>
           </div>
         </div>
         <div className="flex border-b border-gray-700">
-        <button
+          <button
             onClick={() => setActiveTab("Overview")}
             className="flex-1 p-4 text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
