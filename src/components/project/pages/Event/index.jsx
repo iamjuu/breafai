@@ -4,7 +4,6 @@ import {
   Calendar,
   Heart,
   Copy,
-  FileType,
   Twitter,
 
 } from "lucide-react";
