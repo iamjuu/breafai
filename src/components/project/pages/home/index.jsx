@@ -1,6 +1,6 @@
 import React from "react";
 import { Calendar, Clock } from "lucide-react";
-import { Profile, Banner, Tic, Time, Bookmark } from "../../../../assets";
+import { Profile, Banner,  Time, Bookmark } from "../../../../assets";
 import Button from "../../../button";
 
 const EventDetailsPage = () => {

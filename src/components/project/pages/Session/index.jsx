@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Profile, Time } from "../../../../assets";
 import Button from "../../../button";
+import { Link } from 'react-router-dom';
 
 const DatePicker = () => {
   const [currentDate, setCurrentDate] = useState(new Date(2024, 9, 2));
@@ -47,7 +48,8 @@ const DatePicker = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Transcripted'
+      buttonName: 'Transcripted',
+      link:'/event'
     },
     {
       id: 1,
@@ -61,7 +63,9 @@ const DatePicker = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Transcripted'
+      buttonName: 'Transcripted',
+      link:'/event'
+
     },
     {
       id: 1,
@@ -88,7 +92,9 @@ const DatePicker = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Transcripted'
+      buttonName: 'Transcripted',
+      link:'/event'
+
     }, {
       id: 1,
       date: "15 Aug 2024",
@@ -101,7 +107,9 @@ const DatePicker = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Transcripted'
+      buttonName: 'Transcripted',
+      link:'/event'
+
     },
   ];
 
@@ -161,59 +169,62 @@ const DatePicker = () => {
         {/* Events */}
         <div className="mt-6">
           <div className="flex flex-col gap-4">
-            {events.map((event) => (
+          {events.map((event) => (
+  <Link to={event.link} key={event.id}> {/* Ensure 'key' is at the correct level */}
+    <div className="flex bg-[#282C3A] rounded-md p-4 flex-col gap-3">
+      {/* Header Section */}
+      <div className="flex justify-between items-center flex-wrap gap-2">
+        <div className="flex gap-2 md:gap-3 flex-wrap items-center">
+          <Calendar color="white" size={20} />
+          <span className="text-gray-300 text-xs md:text-sm">{event.date}</span>
+          <span className="text-gray-300 text-xs md:text-sm">{event.stage}</span>
+        </div>
+
+        <Button 
+          btnName={event.buttonName} 
+          img={Time} 
+          className="border text-gray-600 bg-white items-center p-1 flex rounded-md text-xs md:text-sm" 
+        />
+      </div>
+
+      {/* Title Section */}
+      <div className="border-b border-dotted border-gray-500 pb-3">
+        <p className="text-gray-300 text-sm md:text-base font-medium">
+          {event.title}
+        </p>
+      </div>
+
+      {/* Footer Section */}
+      <div className="w-full py-3 text-white flex items-center justify-between flex-wrap gap-3">
+        <div className="flex items-center">
+          <div className="flex -space-x-2">
+            {event.attendees.map((attendee) => (
               <div
-                key={event.id}
-                className="flex bg-[#282C3A] rounded-md p-4 flex-col gap-3"
+                key={attendee.id}
+                className="relative rounded-full border-2 border-gray-900 overflow-hidden w-6 h-6 md:w-8 md:h-8 group"
               >
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <div className="flex gap-2 md:gap-3 flex-wrap items-center">
-                    <Calendar color="white" size={20} />
-                    <span className="text-gray-300 text-xs md:text-sm">{event.date}</span>
-                    <span className="text-gray-300 text-xs md:text-sm">{event.stage}</span>
-                  </div>
-
-                  <Button 
-                    btnName={event.buttonName} 
-                    img={Time} 
-                    className="border text-gray-600 bg-white items-center p-1 flex rounded-md text-xs md:text-sm" 
-                  />
-                </div>
-
-                <div className="border-b border-dotted border-gray-500 pb-3">
-                  <p className="text-gray-300 text-sm md:text-base font-medium">
-                    {event.title}
-                  </p>
-                </div>
-
-                <div className="w-full py-3 text-white flex items-center justify-between flex-wrap gap-3">
-                  <div className="flex items-center">
-                    <div className="flex -space-x-2">
-                      {event.attendees.map((attendee) => (
-                        <div
-                          key={attendee.id}
-                          className="relative rounded-full border-2 border-gray-900 overflow-hidden w-6 h-6 md:w-8 md:h-8 group"
-                        >
-                          <img
-                            src={attendee.imageUrl}
-                            alt="Attendee"
-                            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:translate-y-12"
-                          />
-                        </div>
-                      ))}
-                      <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-800 border-2 border-gray-900 text-xs md:text-sm text-gray-400">
-                        +{event.additionalAttendees}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center text-gray-400 gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-xs md:text-sm">{event.timeSlot}</span>
-                  </div>
-                </div>
+                <img
+                  src={attendee.imageUrl}
+                  alt="Attendee"
+                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:translate-y-12"
+                />
               </div>
             ))}
+            <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-800 border-2 border-gray-900 text-xs md:text-sm text-gray-400">
+              +{event.additionalAttendees}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center text-gray-400 gap-2">
+          <Clock className="w-4 h-4" />
+          <span className="text-xs md:text-sm">{event.timeSlot}</span>
+        </div>
+      </div>
+    </div>
+  </Link>
+))}
+
           </div>
         </div>
       </div>

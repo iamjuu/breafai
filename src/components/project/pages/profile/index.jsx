@@ -1,5 +1,5 @@
 import React from "react";
-import { Banner, Logo, Profile, Pen, Location, Message, Phone } from "../../../../assets";
+import { Banner,  Profile, Pen, Location, Message, Phone } from "../../../../assets";
 
 const ProfilePage = () => {
   return (

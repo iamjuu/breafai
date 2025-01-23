@@ -1,5 +1,5 @@
 import React from 'react'
-import { Share2, Clock, Calendar, Download } from 'lucide-react';
+import { Share2, Download } from 'lucide-react';
 
 const index = () => {
   return (
