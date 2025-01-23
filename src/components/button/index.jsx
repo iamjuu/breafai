@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Button = ({ btnName ,img,icon,className}) => {
+const Button = ({ btnName, img, icon, className }) => {
   return (
-    <button className={` text-white ${className}`}>
-      {icon}   <img src={img} alt="" />   {btnName}
+    <button className={`flex items-center gap-2 ${className}`}>
+      {icon && <span>{icon}</span>}
+      {img && <img src={img} alt="" />}
+      {btnName && <span>{btnName}</span>}
     </button>
   );
 };
+
 export default Button;

@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import {
-  Share2,
   Clock,
   Calendar,
   Heart,
   Copy,
   FileType,
   Twitter,
-  Sparkles,
-  RefreshCw,
+
 } from "lucide-react";
 import {
   Calander,
@@ -23,9 +21,19 @@ import {
   Bookmark,
   Social,
   Lindekin,
+  Pdf,
+  Download1,
+  ShareBlack
 } from "../../../../assets";
 import Button from "../../../button";
+import {useNavigate} from 'react-router-dom'
+
 const EventDetailsPage = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // Goes back to the previous page
+  };
   const [activeTab, setActiveTab] = useState("Overview");
   const [isTwitter, setTwitter] = useState(false);
   const [isLinked, setLinked] = useState(false);
@@ -536,7 +544,7 @@ const EventDetailsPage = () => {
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-                <FileType className="w-8 h-8 text-red-500" />
+                <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">title</h3>
@@ -544,13 +552,13 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <img src={Download} alt="" />
+              <img src={Download1} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-                <FileType className="w-8 h-8 text-red-500" />
+              <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -560,13 +568,13 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <img src={Download} alt="" />
+              <img src={Download1} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-                <FileType className="w-8 h-8 text-red-500" />
+              <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -576,13 +584,13 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <img src={Download} alt="" />
+              <img src={Download1} alt="" />
             </button>
           </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-                <FileType className="w-8 h-8 text-red-500" />
+              <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -592,7 +600,7 @@ const EventDetailsPage = () => {
               </div>
             </div>
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <img src={Download} alt="" />
+              <img src={Download1} alt="" />
             </button>
           </div>
         </div>
@@ -611,7 +619,6 @@ const EventDetailsPage = () => {
     } else if (activeTab === "Resources") {
       activeContent = resourcesContent;
     }
-
     return activeContent.map((item) => item.content);
   };
 
@@ -621,14 +628,13 @@ const EventDetailsPage = () => {
         <div
           style={{
             borderRadius: "16px",
-            // height:'175px',
             background:
               "linear-gradient(to bottom right, #D5F8FF, #75EEFF, #0052D4)",
           }}
           className="p-4  text-white"
         >
-          <button>
-            <img
+          <button  onClick={handleBack}>
+            <img 
               className="bg-gray-200 p-1 rounded-full"
               src={Leftarrow}
               alt=""
@@ -670,7 +676,7 @@ const EventDetailsPage = () => {
             </div>
             <div className="ml-auto">
               {/* <Share2 className="w-5 h-5" /> */}
-              <img style={{ color: "black" }} src={Share} alt="" />
+              <img style={{ color: "black" }} src={ShareBlack} alt="" />
             </div>
           </div>
         </div>
