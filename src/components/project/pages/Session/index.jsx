@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock,ChevronLeft, ChevronRight } from 'lucide-react';
-import { Profile, Banner } from "../../../../assets";
+import { Profile, Time } from "../../../../assets";
 import Button from "../../../button";
 
 const DatePicker = () => {
@@ -93,6 +93,35 @@ const DatePicker = () => {
         buttonName:'Loading'
   
       },
+      {
+        id: 2,
+        date: "15 Aug 2024",
+        stage: "Stage 02",
+        title: "Digital Transformation in Modern Banking",
+        timeSlot: "10:00 AM - 11:30 AM",
+        attendees: [
+          { id: 1, imageUrl: Profile },
+          { id: 2, imageUrl: Profile },
+          { id: 3, imageUrl: Profile },
+        ],
+        additionalAttendees: 2,
+        buttonName:'Loading'
+  
+      }, {
+        id: 2,
+        date: "15 Aug 2024",
+        stage: "Stage 02",
+        title: "Digital Transformation in Modern Banking",
+        timeSlot: "10:00 AM - 11:30 AM",
+        attendees: [
+          { id: 1, imageUrl: Profile },
+          { id: 2, imageUrl: Profile },
+          { id: 3, imageUrl: Profile },
+        ],
+        additionalAttendees: 2,
+        buttonName:'Loading'
+  
+      },
   ];
 
   return (
@@ -149,7 +178,7 @@ const DatePicker = () => {
 
 {/* bookings */}
     <div>
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col p-3 gap-3">
             {events.map((event) => (
               <div
                 key={event.id}
@@ -164,7 +193,7 @@ const DatePicker = () => {
                   </div>
 
                   <div>
-                  <Button btnName={event.buttonName}     className="border text-black bg-white rounded-md" />
+                  <Button btnName={event.buttonName}   img={Time}   className="border text-gray-600 bg-white items-center p-1  flex   rounded-md" />
                   </div>
                 </div>
 

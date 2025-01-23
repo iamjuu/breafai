@@ -12,5 +12,10 @@ import FolderLine from "./icons/folder-2-line.svg";
 import Share from './icons/Paper Download - Iconly Pro.svg';
 import Download from './icons/Paper Download - Iconly Pro (1).svg';
 import Leftarrow from './icons/arrow-left-s-line.svg';
+import Bookmark from './icons/Buttons [1.0].svg';
+import Lindekin from './icons/linkedin-fill.svg';
+import Tic from './icons/select-box-circle-fill (1).svg'
+import Time from './icons/time-fill.svg'
 
-export { Leftarrow,Download,Share,Chat, Folder, Logo, Chat1, Calander, Banner, Profile,OverView,Social,Takeaway,FolderLine };
+
+export {Lindekin, Tic,Time,Leftarrow,Download,Share,Chat, Folder,Bookmark, Logo, Chat1, Calander, Banner, Profile,OverView,Social,Takeaway,FolderLine };

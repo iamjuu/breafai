@@ -1,6 +1,6 @@
 import React from "react";
 import { Calendar, Clock } from "lucide-react";
-import { Profile, Banner } from "../../../../assets";
+import { Profile, Banner,Tic, Time, Bookmark} from "../../../../assets";
 import Button from "../../../button";
 const EventDetailsPage = () => {
   // Event data structure
@@ -34,13 +34,42 @@ const EventDetailsPage = () => {
       buttonName:'Loading'
 
     },
+    {
+      id: 2,
+      date: "15 Aug 2024",
+      stage: "Stage 02",
+      title: "Digital Transformation in Modern Banking",
+      timeSlot: "10:00 AM - 11:30 AM",
+      attendees: [
+        { id: 1, imageUrl: Profile },
+        { id: 2, imageUrl: Profile },
+        { id: 3, imageUrl: Profile },
+      ],
+      additionalAttendees: 2,
+      buttonName:'Loading'
+
+    },  {
+      id: 2,
+      date: "15 Aug 2024",
+      stage: "Stage 02",
+      title: "Digital Transformation in Modern Banking",
+      timeSlot: "10:00 AM - 11:30 AM",
+      attendees: [
+        { id: 1, imageUrl: Profile },
+        { id: 2, imageUrl: Profile },
+        { id: 3, imageUrl: Profile },
+      ],
+      additionalAttendees: 2,
+      buttonName:'Loading'
+
+    },
   ];
 
   return (
-    <div className="bg-gray-900  min-h-screen">
-      <div className=" flex flex-col justify-center items-center">
+    <div className="bg-gray-900 max-w-[500px]  min-h-screen">
+      <div className=" flex flex-col  bg-[#10131A] justify-center items-center">
         {/* Header */}
-        <div className="p-4 flex items-center gap-3">
+        <div className="p-2 flex    w-full  gap-3">
           <div className="w-14 h-14 rounded-full overflow-hidden">
             <img
               src={Profile}
@@ -57,11 +86,11 @@ const EventDetailsPage = () => {
         </div>
 
         {/* Banner */}
-        <div className="w-[366px] h-[300px]   bg-red-200 ">
+        <div className="   ">
           <img
             src={Banner}
             alt="Banner"
-            className="w-full h-full  rounded-md object-cover"
+            className="w-full h-full p-1 rounded-[15px] object-cover"
           />
         </div>
 
@@ -76,7 +105,7 @@ const EventDetailsPage = () => {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="flex bg-[#282C3A] rounded-md p-3 flex-col gap-2"
+                className="flex bg-[#282C3A] rounded-[16px] p-3 flex-col gap-2"
               >
                 {/* Event Header */}
                 <div className="flex  justify-between    items-center flex-wrap">
@@ -87,7 +116,7 @@ const EventDetailsPage = () => {
                   </div>
 
                   <div>
-                  <Button btnName={event.buttonName}     className="border text-black bg-white rounded-md" />
+                  <Button btnName={event.buttonName}   img={Time}   className="border text-gray-600 bg-white items-center p-1  flex   rounded-md" />
                   </div>
                 </div>
 
@@ -105,7 +134,7 @@ const EventDetailsPage = () => {
                       {event.attendees.map((attendee) => (
                         <div
                         key={attendee.id}
-                        className="relative rounded-full border-2 border-gray-900 overflow-hidden w-8 h-8 group"
+                        className="relative rounded-full border-2  overflow-hidden w-8 h-8 group"
                       >
                         <img
                           src={attendee.imageUrl}
@@ -123,7 +152,7 @@ const EventDetailsPage = () => {
 
                   <div className="flex items-center text-gray-400">
                     <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{event.timeSlot}</span>
+                    <span className="text-sm">{event.timeSlot}</span>  <img src={Bookmark} alt="" />
                   </div>
                 </div>
               </div>
