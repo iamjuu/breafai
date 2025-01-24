@@ -41,7 +41,7 @@ const ProfilePage = () => {
               <div className="flex-shrink-0 w-10 h-10 border border-[#5BF5FF] flex items-center justify-center">
                 <img src={Location} alt="" className="w-6 h-6" />
               </div>
-              <div>
+              <div className="bg-gray-500">
                 <p style={{fontSize:'14px'}} className="font-medium text-[#868C98]">Address</p>
                 <p  style={{fontSize:'16px'}} className="text-sm">Vellimadukunnu, Calicut</p>
               </div>

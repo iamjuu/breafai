@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Clock,
-  Calendar,
-  Heart,
-  Copy,
-  Twitter,
-
-} from "lucide-react";
+import { Clock, Calendar, Heart, Copy, Twitter } from "lucide-react";
 import {
   Calander,
   Chat,
@@ -22,10 +15,11 @@ import {
   Lindekin,
   Pdf,
   Download1,
-  ShareBlack
+  ShareBlack,
+  Profile,
 } from "../../../../assets";
 import Button from "../../../button";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const EventDetailsPage = () => {
   const navigate = useNavigate();
@@ -423,20 +417,24 @@ const EventDetailsPage = () => {
               <span className="text-gray-300">Social Content</span>
             </div>
             <div className="flex  bg-[#222534] p-2 rounded-[8px] gap-2">
-              <div className= {` flex  p-2 rounded-[6px] justify-center items-center ${isLinked ? "bg-[#5BF5FF]" : ""} `}>
+              <div
+                className={` flex  p-2 rounded-[6px] justify-center items-center ${isLinked ? "bg-[#5BF5FF]" : ""} `}
+              >
                 <img src={Lindekin} alt="" />
                 <span
                   className="text-gray-300 cursor-pointer hover:text-cyan-400 transition-colors"
                   onClick={handleSocialClick}
                 >
-                  <p className={` ${isLinked?'text-black':''}`}>Linkedin</p>
+                  <p className={` ${isLinked ? "text-black" : ""}`}>Linkedin</p>
                 </span>
               </div>
 
               <div
                 className={` flex justify-center p-2  rounded-[6px] items-center ${isTwitter ? "bg-[#5BF5FF]" : ""} `}
               >
-                <Twitter className={ `${isTwitter ? "text-black" : "text-[#5BF5FF]"}`} />
+                <Twitter
+                  className={`${isTwitter ? "text-black" : "text-[#5BF5FF]"}`}
+                />
                 <span
                   className="text-gray-300 cursor-pointer hover:text-cyan-400 transition-colors"
                   onClick={handleTwitterClick}
@@ -557,7 +555,7 @@ const EventDetailsPage = () => {
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-              <img src={Pdf} alt="" />
+                <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -573,7 +571,7 @@ const EventDetailsPage = () => {
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-              <img src={Pdf} alt="" />
+                <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -589,7 +587,7 @@ const EventDetailsPage = () => {
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
-              <img src={Pdf} alt="" />
+                <img src={Pdf} alt="" />
               </div>
               <div>
                 <h3 className="text-white text-sm font-medium mb-1">
@@ -630,10 +628,10 @@ const EventDetailsPage = () => {
             background:
               "linear-gradient(to bottom right, #D5F8FF, #75EEFF, #0052D4)",
           }}
-          className="p-4  text-white"
+          className="p-4  h-[175px] text-white"
         >
-          <button  onClick={handleBack}>
-            <img 
+          <button onClick={handleBack}>
+            <img
               className="bg-gray-200 p-1 rounded-full"
               src={Leftarrow}
               alt=""
@@ -647,7 +645,12 @@ const EventDetailsPage = () => {
           </h1>
           <div className="flex items-center  border-t pt-2 gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden">
-              <div className="w-full h-full bg-gray-300"></div>
+              <div
+                style={{
+                  backgroundImage: `url(${Profile})`,
+                }}
+                className="w-full h-full bg-gray-600"
+              ></div>
             </div>
             <div>
               <h2
@@ -674,24 +677,23 @@ const EventDetailsPage = () => {
               <span className=" text-black text-sm">45 min</span>
             </div>
             <div className="ml-auto">
-              {/* <Share2 className="w-5 h-5" /> */}
               <img style={{ color: "black" }} src={ShareBlack} alt="" />
             </div>
           </div>
         </div>
-        <div className="flex border-b border-gray-700">
+        <div className="flex border-b pb-3 mt-5  border-gray-700">
           <button
             onClick={() => setActiveTab("Overview")}
-            className="flex-1 p-4 text-gray-400 hover:bg-gray-800 hover:rounded-md"
+            className="flex-1     text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col justify-center items-center gap-2">
               <img src={Calander} alt="" />
               <span className="text-sm">Overview</span>
             </div>
           </button>
           <button
             onClick={() => setActiveTab("Take Away 1")}
-            className="flex-1 p-4 text-gray-400 hover:bg-gray-800 hover:rounded-md"
+            className="flex-1  text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
               <img src={Chat} alt="" />
@@ -700,7 +702,7 @@ const EventDetailsPage = () => {
           </button>
           <button
             onClick={() => setActiveTab("Social")}
-            className="flex-1 p-4 text-gray-400  hover:bg-gray-800 hover:rounded-md"
+            className="flex-1 text-gray-400  hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
               <img src={Chat1} alt="" />
@@ -709,7 +711,7 @@ const EventDetailsPage = () => {
           </button>
           <button
             onClick={() => setActiveTab("Resources")}
-            className="flex-1 p-4 text-gray-400   hover:bg-gray-800 hover:rounded-md border-blue-400"
+            className="flex-1  text-gray-400   hover:bg-gray-800 hover:rounded-md border-blue-400"
           >
             <div className="flex flex-col   items-center gap-2">
               <img src={Folder} alt="" />
@@ -717,7 +719,7 @@ const EventDetailsPage = () => {
             </div>
           </button>
         </div>
-        <div className="p-2   flex flex-col gap-2  text-white">
+        <div className=" mt-4  flex flex-col gap-2  text-white">
           {renderContent()}
         </div>
       </div>
