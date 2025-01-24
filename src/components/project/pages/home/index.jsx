@@ -67,8 +67,8 @@ const EventDetailsPage = () => {
     <div className="bg-gray-900 w-full min-h-screen px-4 md:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto flex flex-col bg-[#10131A]">
         {/* Header */}
-        <div className="p-4 flex items-center gap-4 w-full">
-          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0">
+        <div  className="p-4 flex items-center   gap-[6px] w-full">
+          <div className="w-[48px] h-[48px]   md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0">
             <img
               src={Profile}
               alt="Profile"
@@ -76,25 +76,25 @@ const EventDetailsPage = () => {
             />
           </div>
           <div className="flex-grow">
-            <p className="text-sm md:text-base text-gray-300">Welcome Back</p>
-            <h3 className="text-base md:text-lg font-bold text-gray-100">
+            <p  style={{fontSize:'12px'}} className=" md:text-base text-gray-300">Welcome Back</p>
+            <h3 style={{fontSize:'16px',fontWeight:'600'}}  className=" font-bold text-gray-100">
               Ahmed Zidane ! 🤟🏻
             </h3>
           </div>
         </div>
 
         {/* Banner */}
-        <div className="w-full px-4">
+        <div className="w-full ">
           <img
             src={Banner}
             alt="Banner"
-            className="w-full rounded-[15px] object-cover"
+            className="w-[366px] rounded-[15px] object-cover"
           />
         </div>
 
         {/* Event Section */}
-        <div className="w-full px-4">
-          <p className="text-gray-200 py-5 text-base font-medium">
+        <div className="w-full flex flex-col ] ">
+          <p   style={{fontSize:'16px',fontWeight:'500'}}  className= "p-2 text-gray-200 ">
             Latest Updated
           </p>
 
@@ -121,15 +121,15 @@ const EventDetailsPage = () => {
 
                 {/* Event Title */}
                 <div className="border-b border-dotted border-gray-500 pb-3">
-                  <p className="text-gray-300 text-sm md:text-base font-medium">
+                  <p   style={{fontSize:'16px'}} className="text-gray-300 text-sm md:text-base font-medium">
                     {event.title}
                   </p>
                 </div>
 
                 {/* Attendees and Time */}
-                <div className="w-full py-3 text-white flex items-center justify-between flex-wrap gap-3">
+                <div className="w-full  text-white flex items-center justify-between flex-wrap gap-3">
                   <div className="flex items-center">
-                    <div className="flex -space-x-2">
+                    <div className="flex bg-[#F6F8FA] rounded-full p-[1px] -space-x-2">
                       {event.attendees.map((attendee) => (
                         <div
                           key={attendee.id}
@@ -142,7 +142,7 @@ const EventDetailsPage = () => {
                           />
                         </div>
                       ))}
-                      <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-800 border-2 border-gray-900 text-xs md:text-sm text-gray-400">
+                      <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#F6F8FA] border-2  text-xs md:text-sm text-gray-700">
                         +{event.additionalAttendees}
                       </div>
                     </div>
@@ -151,7 +151,7 @@ const EventDetailsPage = () => {
                   <div className="flex items-center text-gray-400 gap-2">
                     <Clock className="w-4 h-4" />
                     <span className="text-xs md:text-sm">{event.timeSlot}</span>
-                    <img src={Bookmark} alt="bookmark" className="w-4 h-4" />
+                    <img src={Bookmark} alt="bookmark" className="w-[24px] h-[24px]" />
                   </div>
                 </div>
               </div>

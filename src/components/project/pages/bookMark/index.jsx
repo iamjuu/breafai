@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Calendar, Clock, Heart, Share2 } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import {
   Profile,
   Time,
@@ -7,6 +7,9 @@ import {
   Chat,
   Session,
   Nosession,
+  Bookmarknotfilled,
+  Share,
+  Heart
 } from "../../../../assets";
 import Button from "../../../button";
 
@@ -54,36 +57,50 @@ const Sessions = () => {
   return (
     <div className="bg-[#10131A] min-h-screen p-4">
       <div className="max-w-md mx-auto">
-        <div className="flex gap-4 mb-6">
+        <div className="flex  justify-center gap-[56px]  pb-2  items-center">
           <button
+            style={{ fontSize: "14px" }}
             onClick={() => setActiveTab("sessions")}
-            className={`flex items-center gap-2 ${
+            className={`flex  pb-2 items-center gap-[2px] ${
               activeTab === "sessions"
                 ? "text-blue-500 border-b-2 border-blue-500"
                 : "text-gray-400"
             }`}
           >
-            <div className="w-5 h-5">
-              <img src={Session} alt="" />
+            <div className="w-[38px]  flex  justify-center h-[38px]">
+              <img className="w-[25px]" src={Session} alt="" />
             </div>
             Sessions
           </button>
 
           <button
+            style={{ fontSize: "14px" }}
             onClick={() => setActiveTab("takeAway")}
-            className={`flex items-center gap-2 px-3 py-2 ${
-              activeTab === "takeAway"
-                ? "text-blue-500 border-b-2 border-blue-500"
-                : "text-gray-400"
+            className={`flex  pb-2 items-center gap-[2px] ${
+              activeTab === "sessions"
+                ? "text-gray-500 "
+                : "text-blue-400  border-b-2 border-blue-500"
             }`}
           >
-            <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center">
-              <img src={Chat} alt="" />
+            <div className="w-[38px]  flex  justify-center h-[38px]">
+              <img className="w-[25px]" src={Chat} alt="" />
             </div>
             Take Away
           </button>
         </div>
-
+        <div>
+          <h1
+            style={{ fontSize: "16px", fontWeight: "600" }}
+            className="text-white  gap-[8px] mb-3 flex"
+          >
+            {" "}
+            <span>
+              {" "}
+              <img src={Bookmarknotfilled} alt="" />{" "}
+            </span>
+            Book marks
+          </h1>
+        </div>
         {activeTab === "sessions" && (
           <div className="space-y-4">
             {events.length > 0 ? (
@@ -92,6 +109,7 @@ const Sessions = () => {
                   key={event.id}
                   className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-3"
                 >
+                  {/* Event Header */}
                   <div className="flex justify-between items-center flex-wrap gap-2">
                     <div className="flex gap-2 md:gap-3 flex-wrap">
                       <Calendar color="white" size={20} />
@@ -109,15 +127,20 @@ const Sessions = () => {
                     />
                   </div>
 
+                  {/* Event Title */}
                   <div className="border-b border-dotted border-gray-500 pb-3">
-                    <p className="text-gray-300 text-sm md:text-base font-medium">
+                    <p
+                      style={{ fontSize: "16px" }}
+                      className="text-gray-300 text-sm md:text-base font-medium"
+                    >
                       {event.title}
                     </p>
                   </div>
 
-                  <div className="w-full py-3 text-white flex items-center justify-between flex-wrap gap-3">
+                  {/* Attendees and Time */}
+                  <div className="w-full text-white flex items-center justify-between flex-wrap gap-3">
                     <div className="flex items-center">
-                      <div className="flex -space-x-2">
+                      <div className="flex bg-[#F6F8FA] rounded-full p-[1px] -space-x-2">
                         {event.attendees.map((attendee) => (
                           <div
                             key={attendee.id}
@@ -130,7 +153,7 @@ const Sessions = () => {
                             />
                           </div>
                         ))}
-                        <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-gray-800 border-2 border-gray-900 text-xs md:text-sm text-gray-400">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#F6F8FA] border-2 text-xs md:text-sm text-gray-700">
                           +{event.additionalAttendees}
                         </div>
                       </div>
@@ -141,13 +164,17 @@ const Sessions = () => {
                       <span className="text-xs md:text-sm">
                         {event.timeSlot}
                       </span>
-                      <img src={Bookmark} alt="bookmark" className="w-4 h-4" />
+                      <img
+                        src={Bookmark}
+                        alt="bookmark"
+                        className="w-[24px] h-[24px]"
+                      />
                     </div>
                   </div>
                 </div>
               ))
             ) : (
-              // ***************
+              // Fallback for no events
               <div className="w-full px-4">
                 <img
                   src={Nosession}
@@ -159,13 +186,27 @@ const Sessions = () => {
           </div>
         )}
         {activeTab === "takeAway" && (
-          <div className="bg-[#1C1F26] rounded-lg p-4 text-white">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-yellow-400 text-xl">⭐</span>
-              <h2 className="text-lg font-semibold">{takeawayContent.title}</h2>
+          <div className="bg-[#282C3A] rounded-lg  p-2 text-white">
+            <div className="flex    gap-2 mb-3">
+              <span style={{ fontSize: "18px" }} className="text-yellow-400 ">
+                🤙
+              </span>
+              <h2
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "600",
+                  lineHeight: "22px",
+                }}
+                className=" font-semibold"
+              >
+                {takeawayContent.title}
+              </h2>
             </div>
 
-            <p className="text-gray-400 text-sm mb-4">
+            <p
+              style={{ fontSize: "14px" }}
+              className="text-[#CDD0D5] p-2  mb-4"
+            >
               {takeawayContent.description}
             </p>
 
@@ -173,7 +214,7 @@ const Sessions = () => {
               {takeawayContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-gray-400 text-sm px-2 py-1 bg-[#282C3A] rounded-full"
+                  className="text-gray-400 text-sm px-2 py-1 bg-[#282C3A] rounded-[7px]"
                 >
                   #{tag}
                 </span>
@@ -181,15 +222,15 @@ const Sessions = () => {
             </div>
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-1 text-cyan-500">
-                <Heart className="w-5 h-5" />
+                <img className="w-[20px] h-[19px]" src={Heart} alt="hearticon" />
                 <span>{takeawayContent.likes}</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Share2 className="w-5 h-5 text-gray-400" />
+              <div className="flex   items-center gap-3">
+                <img src={Share} alt="share" />
                 <img
                   src={Bookmark}
                   alt="bookmark"
-                  className="w-5 h-5 text-gray-400"
+                  className="w-[24px] h-[24px] text-gray-400"
                 />
               </div>
             </div>
