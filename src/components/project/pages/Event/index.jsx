@@ -62,7 +62,7 @@ const EventDetailsPage = () => {
           </div>
           <div className="bg-[#282C3A] p-3 rounded-lg max-w-lg">
             <p
-              style={{ lineHeight: "18px", fontSize: "14px" }}
+              style={{ lineHeight: "18px", fontSize: "14px", fontWeight:'400' }}
               className="text-[#CDD0D5] mb-8 leading-relaxed"
             >
               EventHex stands out by tackling two key challenges that
@@ -621,63 +621,81 @@ const EventDetailsPage = () => {
 
   return (
     <div className="w-full max-w-[500px] min-h-screen">
-      <div className="w-full max-w-md bg-gray-900 p-5  min-h-screen">
+      <div className="w-full max-w-md bg-gray-900 p-2  min-h-screen">
         <div
           style={{
             borderRadius: "16px",
             background:
               "linear-gradient(to bottom right, #D5F8FF, #75EEFF, #0052D4)",
           }}
-          className="p-4  h-[175px] text-white"
+          className=" flex  gap-[6px] flex-col justify-center h-[175px] text-white"
         >
-          <button onClick={handleBack}>
-            <img
-              className="bg-gray-200 p-1 rounded-full"
-              src={Leftarrow}
-              alt=""
-            />
-          </button>
-          <h1
-            style={{ fontSize: "16px", fontWeight: "500" }}
-            className=" text-black  font-bold mb-4"
-          >
-            Shaping the Financial Ecosystem of the Future
-          </h1>
-          <div className="flex items-center  border-t pt-2 gap-4">
-            <div className="w-12 h-12 rounded-full overflow-hidden">
-              <div
-                style={{
-                  backgroundImage: `url(${Profile})`,
-                }}
-                className="w-full h-full bg-gray-600"
-              ></div>
-            </div>
-            <div>
-              <h2
-                style={{ fontSize: "14px" }}
-                className=" text-black  font-semibold"
+          <div className=" gap-[6px] flex flex-col p-5">
+            <div className="w-full flex  justify-between items-center gap-[14px] ">
+              <button onClick={handleBack} className="flex-shrink-0">
+                <img
+                  className="bg-gray-200 w-[32px] h-[32px] rounded-full"
+                  src={Leftarrow}
+                  alt=""
+                />
+              </button>
+              <h1
+                style={{ fontSize: "16px", fontWeight: "500" }}
+                className="text-black font-bold flex-grow"
               >
-                Safari Sanders Dennyes
-              </h2>
-              <p style={{ fontSize: "12px" }} className="text-black opacity-90">
-                AI Research Director, Tecnosys
-              </p>
+                Shaping the Financial Ecosystem of the Future
+              </h1>
             </div>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Calendar
-                style={{ fontWeight: "100" }}
-                className=" text-black  w-4 h-4"
-              />
-              <span className=" text-black text-sm">Jan 17, 2025</span>
+
+            <div className="flex items-center   border-t    gap-4">
+              <div className="w-12 h-12 rounded-full overflow-hidden">
+                <div
+                  style={{
+                    backgroundImage: `url(${Profile})`,
+                  }}
+                  className="w-full h-full bg-gray-600"
+                ></div>
+              </div>
+              <div>
+                <h2
+                  style={{ fontSize: "14px" }}
+                  className=" text-black  font-semibold"
+                >
+                  Safari Sanders Dennyes
+                </h2>
+                <p
+                  style={{ fontSize: "12px" }}
+                  className="text-black opacity-90"
+                >
+                  AI Research Director, Tecnosys
+                </p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className=" text-black w-4 h-4" />
-              <span className=" text-black text-sm">45 min</span>
-            </div>
-            <div className="ml-auto">
-              <img style={{ color: "black" }} src={ShareBlack} alt="" />
+
+            <div className="flex items-center  justify-between gap-2  ">
+              <div className="flex  gap-[4px]  items-center ">
+                <Calendar
+                  style={{ fontWeight: "100" }}
+                  className=" text-black  w-[16px] h-[16px]"
+                />
+                <span
+                  style={{ fontSize: "12px" }}
+                  className="    text-black text-sm"
+                >
+                  Jan 17, 2025
+                </span>
+                <div  className="w-[1px] h-4 bg-black"/>
+                <div className="flex items-center ">
+                  <Clock className=" text-black w-4 h-4" />
+                  <span style={{ fontSize: "12px" }} className=" text-black ">
+                    45 min
+                  </span>
+                </div>
+              </div>
+
+              <div className="">
+                <img   className="w-[18px] h-[20px]" style={{ color: "black" }} src={ShareBlack} alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -687,8 +705,8 @@ const EventDetailsPage = () => {
             className="flex-1     text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col justify-center items-center gap-2">
-              <img src={Calander} alt="" />
-              <span className="text-sm">Overview</span>
+              <img  className="w-[36px] h-[36px]" src={Calander} alt="" />
+              <span style={{fontSize:'14px'}} className="">Overview</span>
             </div>
           </button>
           <button
@@ -696,8 +714,8 @@ const EventDetailsPage = () => {
             className="flex-1  text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
-              <img src={Chat} alt="" />
-              <span className="text-sm">Take Away</span>
+              <img   className="w-[36px] h-[36px]" src={Chat} alt="" />
+              <span style={{fontSize:'14px'}} className="">Take Away</span>
             </div>
           </button>
           <button
@@ -705,8 +723,8 @@ const EventDetailsPage = () => {
             className="flex-1 text-gray-400  hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
-              <img src={Chat1} alt="" />
-              <span className="text-sm">Social</span>
+              <img   className="w-[36px] h-[36px]" src={Chat1} alt="" />
+              <span  style={{fontSize:'14px'}} className="">Social</span>
             </div>
           </button>
           <button
@@ -714,8 +732,8 @@ const EventDetailsPage = () => {
             className="flex-1  text-gray-400   hover:bg-gray-800 hover:rounded-md border-blue-400"
           >
             <div className="flex flex-col   items-center gap-2">
-              <img src={Folder} alt="" />
-              <span className="text-sm">Resources</span>
+              <img   className="w-[36px] h-[36px]"  src={Folder} alt="" />
+              <span style={{fontSize:'14px'}} className="text-sm">Resources</span>
             </div>
           </button>
         </div>
