@@ -65,7 +65,7 @@ const EventDetailsPage = () => {
 
   return (
     <div className="bg-gray-900 w-full min-h-screen px-4 md:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto flex flex-col bg-[#10131A]">
+      <div className="max-w-2xl mx-auto flex flex-col ">
         {/* Header */}
         <div  className="p-4 flex items-center   gap-[6px] w-full">
           <div className="w-[48px] h-[48px]   md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0">

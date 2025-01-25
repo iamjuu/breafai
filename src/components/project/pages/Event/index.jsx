@@ -53,53 +53,61 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-          <div className="flex gap-[8px]">
+          <div className="flex  gap-[8px]">
             {" "}
             <span>
               <img className="w-[26px]" src={OverView} alt="" />
             </span>{" "}
-            <p style={{ fontSize: "16px", fontWeight: "500" }}>Overview</p>
-          </div>
-          <div className="bg-[#282C3A] p-3 rounded-lg max-w-lg">
-            <p
-              style={{ lineHeight: "18px", fontSize: "14px", fontWeight:'400' }}
-              className="text-[#CDD0D5] mb-8 leading-relaxed"
-            >
-              EventHex stands out by tackling two key challenges that
-              traditional event management often struggles with: creating
-              personalized experiences and ensuring attendee retention. This
-              platform is built to streamline even
+            <p style={{ fontSize: "16px", padding: "3px", fontWeight: "500" }}>
+              Overview
             </p>
+          </div>
+          <div className="bg-[#282C3A] p-3  rounded-lg max-w-lg">
+            <div className="p-3">
+              <p
+                style={{
+                  lineHeight: "18px",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+                className="text-[#CDD0D5] mb-5 leading-relaxed"
+              >
+                EventHex stands out by tackling two key challenges that
+                traditional event management often struggles with: creating
+                personalized experiences and ensuring attendee retention. This
+                platform is built to streamline even
+              </p>
+            </div>
             <div
               style={{ borderRadius: "16px" }}
-              className="mb-8 p-2  bg-[#222534]"
+              className="mb-8 p-3  flex flex-col gap-[10px]  bg-[#222534]"
             >
               <h3 style={{ fontSize: "14px" }} className="text-[#CDD0D5] mb-1">
                 Session Highlights
               </h3>
-              <ul className="flex flex-col text-left space-y-2">
+              <ul className="flex flex-col  text-left space-y-2 list-disc list-inside marker:text-[#5BF5FF] marker:text-[20px]">
                 {highlights.map((highlight, index) => (
                   <li
+                    style={{ fontSize: "14px", lineHeight: "18px" }}
                     key={index}
-                    className="flex items-center w-full text-sm text-gray-400 gap-2"
+                    className="w-full   text-[#CDD0D5] pl-4 leading-relaxed"
                   >
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
                     <span className="text-gray-300">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex justify-between  ">
+            <div className="flex  p-2 justify-between  ">
               <div className="flex gap-[18px]">
-                <button className="flex items-center   gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
+                <button className="flex items-center   gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
                   {/* <Share className="w-4 h-4" /> */}
-                  <img src={Share} alt="" />
-                  <span>Share</span>
+                  <img className="w-[18px]" src={Share} alt="" />
+                  <span  style={{fontSize:'12px'}}>Share</span>
                 </button>
-                <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
+                <button className="flex items-center gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
                   {/* <Download className="w-4 h-4" /> */}
-                  <img src={Download} alt="" />
-                  <span>Download</span>
+                  <img className="w-[15px] h-[18px]" src={Download} alt="" />
+                  <span style={{fontSize:'12px'}}>Download</span>
                 </button>
               </div>
               <div></div>
@@ -112,53 +120,61 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-          <div className="flex gap-[8px]">
+          <div className="flex  gap-[8px]">
             {" "}
             <span>
               <img className="w-[26px]" src={OverView} alt="" />
             </span>{" "}
-            <p style={{ fontSize: "16px", fontWeight: "500" }}>Overview</p>
-          </div>
-          <div className="bg-[#282C3A] p-3 rounded-lg max-w-lg">
-            <p
-              style={{ lineHeight: "18px", fontSize: "14px" }}
-              className="text-[#CDD0D5] mb-8 leading-relaxed"
-            >
-              EventHex stands out by tackling two key challenges that
-              traditional event management often struggles with: creating
-              personalized experiences and ensuring attendee retention. This
-              platform is built to streamline even
+            <p style={{ fontSize: "16px", padding: "3px", fontWeight: "500" }}>
+              Overview
             </p>
+          </div>
+          <div className="bg-[#282C3A] p-3  rounded-lg max-w-lg">
+            <div className="p-3">
+              <p
+                style={{
+                  lineHeight: "18px",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+                className="text-[#CDD0D5] mb-5 leading-relaxed"
+              >
+                EventHex stands out by tackling two key challenges that
+                traditional event management often struggles with: creating
+                personalized experiences and ensuring attendee retention. This
+                platform is built to streamline even
+              </p>
+            </div>
             <div
               style={{ borderRadius: "16px" }}
-              className="mb-8 p-2  bg-[#222534]"
+              className="mb-8 p-3  flex flex-col gap-[10px]  bg-[#222534]"
             >
               <h3 style={{ fontSize: "14px" }} className="text-[#CDD0D5] mb-1">
                 Session Highlights
               </h3>
-              <ul className="flex flex-col text-left space-y-2">
+              <ul className="flex flex-col  text-left space-y-2 list-disc list-inside marker:text-[#5BF5FF] marker:text-[20px]">
                 {highlights.map((highlight, index) => (
                   <li
+                    style={{ fontSize: "14px", lineHeight: "18px" }}
                     key={index}
-                    className="flex items-center w-full text-sm text-gray-400 gap-2"
+                    className="w-full   text-[#CDD0D5] pl-4 leading-relaxed"
                   >
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
                     <span className="text-gray-300">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex justify-between  ">
+            <div className="flex  p-2 justify-between  ">
               <div className="flex gap-[18px]">
-                <button className="flex items-center   gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
+                <button className="flex items-center   gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
                   {/* <Share className="w-4 h-4" /> */}
-                  <img src={Share} alt="" />
-                  <span>Share</span>
+                  <img className="w-[18px]" src={Share} alt="" />
+                  <span  style={{fontSize:'12px'}}>Share</span>
                 </button>
-                <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
+                <button className="flex items-center gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
                   {/* <Download className="w-4 h-4" /> */}
-                  <img src={Download} alt="" />
-                  <span>Download</span>
+                  <img className="w-[15px] h-[18px]" src={Download} alt="" />
+                  <span style={{fontSize:'12px'}}>Download</span>
                 </button>
               </div>
               <div></div>
@@ -185,22 +201,25 @@ const EventDetailsPage = () => {
             </div>
 
             <Button
-              img={Takeaway}
-              btnName={"Regenerate"}
-              className={
-                " rounded-[7px] border gap-[6px] flex border-[#5BF5FF]"
-              }
-            />
+  img={Takeaway}
+  btnName={"Regenerate"}
+  className={
+    "rounded-[7px] border p-1 gap-[6px]  text-[12px] text-[#5BF5FF] flex border-[#5BF5FF] font-normal"
+  }
+/>
+
           </div>
           <div
             style={{ borderRadius: "16px" }}
             className="bg-[#282C3A] rounded-lg p-4 mb-4"
           >
-            <div className="text-sm text-gray-300 mb-3 flex justify-between items-center"></div>
-            <h2 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
-              <span className="text-yellow-400">👉</span>
-              Cross-Border Payment Innovations Creating Key Challenges
+            <div className=" flex justify-center">
+
+            <h2  style={{fontSize:'17px', fontWeight:'600'}} className="text-white  mb-3 flex items-center gap-2">
+              👉  Cross-Border Payment Innovations Creating Key Challenges
             </h2>
+            </div>
+
             <p className="text-gray-300 mb-4 text-sm">
               EventHex stands out by tackling two key challenges that
               traditional event management often struggles with: creating
@@ -213,7 +232,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #AIGen
@@ -224,7 +243,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Prediction
@@ -235,7 +254,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Strategy
@@ -249,10 +268,10 @@ const EventDetailsPage = () => {
               </button>
               <div className="flex gap-3">
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Bookmark} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Bookmark} alt="" />
                 </button>
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Share} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Share} alt="" />
                 </button>
               </div>
             </div>
@@ -261,18 +280,21 @@ const EventDetailsPage = () => {
       ),
     },
     {
-      name: "Take Away 2",
+      name: "Take Away 1",
       content: (
         <>
+      
           <div
             style={{ borderRadius: "16px" }}
             className="bg-[#282C3A] rounded-lg p-4 mb-4"
           >
-            <div className="text-sm text-gray-300 mb-3 flex justify-between items-center"></div>
-            <h2 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
-              <span className="text-yellow-400">👉</span>
-              Cross-Border Payment Innovations Creating Key Challenges
+            <div className=" flex justify-center">
+
+            <h2  style={{fontSize:'17px', fontWeight:'600'}} className="text-white  mb-3 flex items-center gap-2">
+              👉  Cross-Border Payment Innovations Creating Key Challenges
             </h2>
+            </div>
+
             <p className="text-gray-300 mb-4 text-sm">
               EventHex stands out by tackling two key challenges that
               traditional event management often struggles with: creating
@@ -285,7 +307,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #AIGen
@@ -296,7 +318,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Prediction
@@ -307,7 +329,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Strategy
@@ -321,10 +343,10 @@ const EventDetailsPage = () => {
               </button>
               <div className="flex gap-3">
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Bookmark} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Bookmark} alt="" />
                 </button>
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Share} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Share} alt="" />
                 </button>
               </div>
             </div>
@@ -333,18 +355,21 @@ const EventDetailsPage = () => {
       ),
     },
     {
-      name: "Take Away 2",
+      name: "Take Away 1",
       content: (
         <>
+      
           <div
             style={{ borderRadius: "16px" }}
-            className="  bg-[#282C3A] rounded-lg p-4 mb-10"
+            className="bg-[#282C3A] rounded-lg p-4 mb-4"
           >
-            <div className="text-sm text-gray-300 mb-3 flex justify-between items-center"></div>
-            <h2 className="text-white text-lg font-semibold mb-3 flex items-center gap-2">
-              <span className="text-yellow-400">👉</span>
-              Cross-Border Payment Innovations Creating Key Challenges
+            <div className=" flex justify-center">
+
+            <h2  style={{fontSize:'17px', fontWeight:'600'}} className="text-white  mb-3 flex items-center gap-2">
+              👉  Cross-Border Payment Innovations Creating Key Challenges
             </h2>
+            </div>
+
             <p className="text-gray-300 mb-4 text-sm">
               EventHex stands out by tackling two key challenges that
               traditional event management often struggles with: creating
@@ -357,7 +382,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #AIGen
@@ -368,7 +393,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Prediction
@@ -379,7 +404,7 @@ const EventDetailsPage = () => {
                 className=" flex justify-center items-center bg-gray-900  "
               >
                 <span
-                  style={{ fontSize: "7px", fontWeight: "400" }}
+                  style={{ fontSize: "12px", fontWeight: "400" }}
                   className="text-white p-2"
                 >
                   #Strategy
@@ -393,17 +418,18 @@ const EventDetailsPage = () => {
               </button>
               <div className="flex gap-3">
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Bookmark} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Bookmark} alt="" />
                 </button>
                 <button className="text-gray-400 hover:text-gray-300">
-                  <img src={Share} alt="" />
+                  <img  className="w-[24px] h-[24px]" src={Share} alt="" />
                 </button>
               </div>
             </div>
           </div>
         </>
       ),
-    },
+    }
+   
   ];
 
   const socialContent = [
@@ -412,15 +438,16 @@ const EventDetailsPage = () => {
       content: (
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <div className="flex items-center gap-2">
-              <img src={Social} alt="" />
-              <span className="text-gray-300">Social Content</span>
+            <div className="flex  justify-center  items-center gap-[8px]">
+              <img className="w-[26px]" src={Social} alt="" />
+              <span  style={{fontSize:'16px'}} className="text-gray-300">Social Content</span>
             </div>
-            <div className="flex  bg-[#222534] p-2 rounded-[8px] gap-2">
-              <div
-                className={` flex  p-2 rounded-[6px] justify-center items-center ${isLinked ? "bg-[#5BF5FF]" : ""} `}
+            <div className="flex    bg-[#222534] rounded-[8px] gap-2">
+
+              <div  
+                className={` flex  gap-1 p-1 rounded-[6px]  justify-center items-center ${isLinked ? "bg-[#5BF5FF]" : ""} `}
               >
-                <img src={Lindekin} alt="" />
+                <img  className="w-[20px]" src={Lindekin} alt="" />
                 <span
                   className="text-gray-300 cursor-pointer hover:text-cyan-400 transition-colors"
                   onClick={handleSocialClick}
@@ -429,12 +456,16 @@ const EventDetailsPage = () => {
                 </span>
               </div>
 
-              <div
-                className={` flex justify-center p-2  rounded-[6px] items-center ${isTwitter ? "bg-[#5BF5FF]" : ""} `}
+
+              <div 
+                className={` flex justify-center  gap-1 p-1 rounded-[6px] items-center ${isTwitter ? "bg-[#5BF5FF]" : ""} `}
               >
-                <Twitter
-                  className={`${isTwitter ? "text-black" : "text-[#5BF5FF]"}`}
-                />
+               <Twitter
+  className={`${
+    isTwitter ? "text-black" : "text-[#5BF5FF]"
+  } h-[20px] w-[20px]`}
+/>
+
                 <span
                   className="text-gray-300 cursor-pointer hover:text-cyan-400 transition-colors"
                   onClick={handleTwitterClick}
@@ -479,12 +510,12 @@ const EventDetailsPage = () => {
                 {/* Footer */}
                 <div className="flex gap-3">
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                    <img src={Share} alt="" />
-                    <span>Share</span>
+                    <img className="w-[24px]" src={Share} alt="" />
+                    <span style={{fontSize:'12px'}}>Share</span>
                   </button>
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                    <Copy className="w-4 h-4" />
-                    <span>Copy</span>
+                    <Copy className="w-[24px] h-[24px]" />
+                    <span style={{fontSize:'12px'}}>Copy</span>
                   </button>
                 </div>
               </div>
@@ -517,12 +548,12 @@ const EventDetailsPage = () => {
                 {/* Footer */}
                 <div className="flex gap-3">
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                    <img src={Share} alt="" />
-                    <span>Share</span>
+                    <img  className="w-[24px]" src={Share} alt="" />
+                    <span style={{fontSize:'12px'}}>Share</span>
                   </button>
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                    <Copy className="w-4 h-4" />
-                    <span>Copy</span>
+                    <Copy  className="w-[24px] h-[24px]" />
+                    <span style={{fontSize:'12px'}}>Copy</span>
                   </button>
                 </div>
               </div>
@@ -684,7 +715,7 @@ const EventDetailsPage = () => {
                 >
                   Jan 17, 2025
                 </span>
-                <div  className="w-[1px] h-4 bg-black"/>
+                <div className="w-[1px] h-4 bg-black" />
                 <div className="flex items-center ">
                   <Clock className=" text-black w-4 h-4" />
                   <span style={{ fontSize: "12px" }} className=" text-black ">
@@ -694,7 +725,12 @@ const EventDetailsPage = () => {
               </div>
 
               <div className="">
-                <img   className="w-[18px] h-[20px]" style={{ color: "black" }} src={ShareBlack} alt="" />
+                <img
+                  className="w-[18px] h-[20px]"
+                  style={{ color: "black" }}
+                  src={ShareBlack}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -705,8 +741,10 @@ const EventDetailsPage = () => {
             className="flex-1     text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col justify-center items-center gap-2">
-              <img  className="w-[36px] h-[36px]" src={Calander} alt="" />
-              <span style={{fontSize:'14px'}} className="">Overview</span>
+              <img className="w-[36px] h-[36px]" src={Calander} alt="" />
+              <span style={{ fontSize: "14px" }} className="">
+                Overview
+              </span>
             </div>
           </button>
           <button
@@ -714,8 +752,10 @@ const EventDetailsPage = () => {
             className="flex-1  text-gray-400 hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
-              <img   className="w-[36px] h-[36px]" src={Chat} alt="" />
-              <span style={{fontSize:'14px'}} className="">Take Away</span>
+              <img className="w-[36px] h-[36px]" src={Chat} alt="" />
+              <span style={{ fontSize: "14px" }} className="">
+                Take Away
+              </span>
             </div>
           </button>
           <button
@@ -723,8 +763,10 @@ const EventDetailsPage = () => {
             className="flex-1 text-gray-400  hover:bg-gray-800 hover:rounded-md"
           >
             <div className="flex flex-col items-center gap-2">
-              <img   className="w-[36px] h-[36px]" src={Chat1} alt="" />
-              <span  style={{fontSize:'14px'}} className="">Social</span>
+              <img className="w-[36px] h-[36px]" src={Chat1} alt="" />
+              <span style={{ fontSize: "14px" }} className="">
+                Social
+              </span>
             </div>
           </button>
           <button
@@ -732,8 +774,10 @@ const EventDetailsPage = () => {
             className="flex-1  text-gray-400   hover:bg-gray-800 hover:rounded-md border-blue-400"
           >
             <div className="flex flex-col   items-center gap-2">
-              <img   className="w-[36px] h-[36px]"  src={Folder} alt="" />
-              <span style={{fontSize:'14px'}} className="text-sm">Resources</span>
+              <img className="w-[36px] h-[36px]" src={Folder} alt="" />
+              <span style={{ fontSize: "14px" }} className="text-sm">
+                Resources
+              </span>
             </div>
           </button>
         </div>

@@ -3,7 +3,7 @@ import { Share2, Download } from 'lucide-react';
 
 const index = () => {
   return (
-    <div className="p-4 text-white">
+    <div className="  text-white">
     <h2 className="text-2xl font-semibold mb-4">Overview</h2>
     <p className="text-gray-300 mb-6">
       EventHex stands out by tackling two key challenges that traditional event management often struggles with: creating personalized experiences and ensuring attendee retention. This platform is built to streamline even
