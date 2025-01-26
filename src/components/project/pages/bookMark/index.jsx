@@ -57,11 +57,11 @@ const Sessions = () => {
   return (
     <div className="bg-[#10131A] min-h-screen p-4">
       <div className="max-w-md mx-auto">
-        <div className="flex  justify-center gap-[56px]  pb-2  items-center">
+        <div className="flex  justify-center gap-[56px]   items-center">
           <button
             style={{ fontSize: "14px" }}
             onClick={() => setActiveTab("sessions")}
-            className={`flex  pb-2 items-center gap-[2px] ${
+            className={`flex   items-center gap-[2px] ${
               activeTab === "sessions"
                 ? "text-blue-500 border-b-2 border-blue-500"
                 : "text-gray-400"
@@ -91,11 +91,11 @@ const Sessions = () => {
         <div>
           <h1
             style={{ fontSize: "16px", fontWeight: "600" }}
-            className="text-white  gap-[8px] mb-3 flex"
+            className="text-[#FFFFFF] py-4  gap-[8px] flex"
           >
-            {" "}
+       
             <span>
-              {" "}
+            
               <img src={Bookmarknotfilled} alt="" />{" "}
             </span>
             Book marks
@@ -111,8 +111,8 @@ const Sessions = () => {
                 >
                   {/* Event Header */}
                   <div className="flex justify-between items-center flex-wrap gap-2">
-                    <div className="flex gap-2 md:gap-3 flex-wrap">
-                      <Calendar color="white" size={20} />
+                    <div className="flex gap-2   justify-center items-center md:gap-3 flex-wrap">
+              <Calendar className='w-[16px]' style={{color:'CDD0D5'}}  />
                       <span className="text-gray-300 text-xs md:text-sm">
                         {event.date}
                       </span>
@@ -187,8 +187,8 @@ const Sessions = () => {
         )}
         {activeTab === "takeAway" && (
           <div className="bg-[#282C3A] rounded-lg  p-2 text-white">
-            <div className="flex    gap-2 mb-3">
-              <span style={{ fontSize: "18px" }} className="text-yellow-400 ">
+            <div className="flex      gap-1 mb-3">
+              <span style={{ fontSize: "18px" }} className=" ">
                 🤙
               </span>
               <h2

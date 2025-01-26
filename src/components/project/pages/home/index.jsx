@@ -94,7 +94,7 @@ const EventDetailsPage = () => {
 
         {/* Event Section */}
         <div className="w-full flex flex-col ] ">
-          <p   style={{fontSize:'16px',fontWeight:'500'}}  className= "p-2 text-gray-200 ">
+          <p   style={{fontSize:'16px',fontWeight:'500'}}  className= "py-3   text-[#FFFFFF] ">
             Latest Updated
           </p>
 

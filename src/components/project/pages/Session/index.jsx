@@ -174,8 +174,8 @@ const DatePicker = () => {
         <div className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-3">
           {/* Event Header */}
           <div className="flex justify-between items-center flex-wrap gap-2">
-            <div className="flex gap-2 md:gap-3 flex-wrap">
-              <Calendar color="white" size={20} />
+            <div className="flex gap-2   justify-center items-center md:gap-3 flex-wrap">
+              <Calendar className='w-[16px]' style={{color:'CDD0D5'}}  />
               <span className="  text-gray-300 text-xs md:text-sm">{event.date}</span>
               <div className='w-[1px] h-[15px] bg-[#CDD0D5]'/>
               <span className="text-gray-300 text-xs md:text-sm">{event.stage}</span>

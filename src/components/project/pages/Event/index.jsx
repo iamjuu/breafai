@@ -16,7 +16,8 @@ import {
   Pdf,
   Download1,
   ShareBlack,
-  Profile,
+  Profile,FolderLine
+  
 } from "../../../../assets";
 import Button from "../../../button";
 import { useNavigate } from "react-router-dom";
@@ -53,12 +54,12 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-          <div className="flex  gap-[8px]">
+          <div className="flex  py-4 gap-[8px]">
             {" "}
             <span>
               <img className="w-[26px]" src={OverView} alt="" />
             </span>{" "}
-            <p style={{ fontSize: "16px", padding: "3px", fontWeight: "500" }}>
+            <p  className="" style={{ fontSize: "16px", fontWeight: "500" }}>
               Overview
             </p>
           </div>
@@ -85,12 +86,12 @@ const EventDetailsPage = () => {
               <h3 style={{ fontSize: "14px" }} className="text-[#CDD0D5] mb-1">
                 Session Highlights
               </h3>
-              <ul className="flex flex-col  text-left space-y-2 list-disc list-inside marker:text-[#5BF5FF] marker:text-[20px]">
+              <ul className="flex flex-col  text-left space-y-2 list-disc  marker:text-[#5BF5FF] marker:text-[20px]">
                 {highlights.map((highlight, index) => (
                   <li
                     style={{ fontSize: "14px", lineHeight: "18px" }}
                     key={index}
-                    className="w-full   text-[#CDD0D5] pl-4 leading-relaxed"
+                    className="w-full   text-[#CDD0D5]  leading-relaxed"
                   >
                     <span className="text-gray-300">{highlight}</span>
                   </li>
@@ -110,79 +111,12 @@ const EventDetailsPage = () => {
                   <span style={{fontSize:'12px'}}>Download</span>
                 </button>
               </div>
-              <div></div>
             </div>
           </div>
         </>
       ),
     },
-    {
-      name: "Overview",
-      content: (
-        <>
-          <div className="flex  gap-[8px]">
-            {" "}
-            <span>
-              <img className="w-[26px]" src={OverView} alt="" />
-            </span>{" "}
-            <p style={{ fontSize: "16px", padding: "3px", fontWeight: "500" }}>
-              Overview
-            </p>
-          </div>
-          <div className="bg-[#282C3A] p-3  rounded-lg max-w-lg">
-            <div className="p-3">
-              <p
-                style={{
-                  lineHeight: "18px",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                }}
-                className="text-[#CDD0D5] mb-5 leading-relaxed"
-              >
-                EventHex stands out by tackling two key challenges that
-                traditional event management often struggles with: creating
-                personalized experiences and ensuring attendee retention. This
-                platform is built to streamline even
-              </p>
-            </div>
-            <div
-              style={{ borderRadius: "16px" }}
-              className="mb-8 p-3  flex flex-col gap-[10px]  bg-[#222534]"
-            >
-              <h3 style={{ fontSize: "14px" }} className="text-[#CDD0D5] mb-1">
-                Session Highlights
-              </h3>
-              <ul className="flex flex-col  text-left space-y-2 list-disc list-inside marker:text-[#5BF5FF] marker:text-[20px]">
-                {highlights.map((highlight, index) => (
-                  <li
-                    style={{ fontSize: "14px", lineHeight: "18px" }}
-                    key={index}
-                    className="w-full   text-[#CDD0D5] pl-4 leading-relaxed"
-                  >
-                    <span className="text-gray-300">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex  p-2 justify-between  ">
-              <div className="flex gap-[18px]">
-                <button className="flex items-center   gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                  {/* <Share className="w-4 h-4" /> */}
-                  <img className="w-[18px]" src={Share} alt="" />
-                  <span  style={{fontSize:'12px'}}>Share</span>
-                </button>
-                <button className="flex items-center gap-2 px-2 py-2 rounded-lg border border-[#5BF5FF] text-cyan-400 hover:bg-gray-800 transition-colors">
-                  {/* <Download className="w-4 h-4" /> */}
-                  <img className="w-[15px] h-[18px]" src={Download} alt="" />
-                  <span style={{fontSize:'12px'}}>Download</span>
-                </button>
-              </div>
-              <div></div>
-            </div>
-          </div>
-        </>
-      ),
-    },
+   
   ];
 
   const takeAwayContent = [
@@ -190,8 +124,8 @@ const EventDetailsPage = () => {
       name: "Take Away 1",
       content: (
         <>
-          <div className="  mt-2 mb-2 flex justify-between">
-            <div className=" flex items-center justify-center ">
+          <div className="  py-4 flex justify-between">
+            <div className=" flex     items-center justify-center ">
               <span>
                 <img className="w-[26px]" src={Takeaway} alt="" />
               </span>
@@ -437,10 +371,10 @@ const EventDetailsPage = () => {
       name: "Social",
       content: (
         <div className="mb-4">
-          <div className="flex justify-between items-center mb-2">
-            <div className="flex  justify-center  items-center gap-[8px]">
+          <div className="flex py-4 justify-between items-center ">
+            <div className="flex  justify-center    items-center gap-[8px]">
               <img className="w-[26px]" src={Social} alt="" />
-              <span  style={{fontSize:'16px'}} className="text-gray-300">Social Content</span>
+              <span  style={{fontSize:'16px'}} className="text-[#FFFFFF]">Social Content</span>
             </div>
             <div className="flex    bg-[#222534] rounded-[8px] gap-2">
 
@@ -568,7 +502,11 @@ const EventDetailsPage = () => {
     {
       name: "Resources",
       content: (
-        <div className="p-1  text-white">
+        <div className="  text-white">
+
+          <div className="">
+            <p className="flex  gap-[8px] text-[16px] items-center py-4">  <span>  <img className="w-[26px] " src={FolderLine} alt="" /></span> Resources</p>
+          </div>
           <div className="flex items-center justify-between bg-gray-800 rounded-lg p-4 mb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
@@ -781,7 +719,7 @@ const EventDetailsPage = () => {
             </div>
           </button>
         </div>
-        <div className=" mt-4  flex flex-col gap-2  text-white">
+        <div className=" mt-2  flex flex-col gap-2  text-white">
           {renderContent()}
         </div>
       </div>
