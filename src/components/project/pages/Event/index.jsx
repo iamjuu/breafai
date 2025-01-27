@@ -429,8 +429,8 @@ const EventDetailsPage = () => {
 
                 {/* Content */}
                 <div className="mb-4">
-                  <p className="text-gray-300  bg-[#222534] mb-3">
-                    <span className="text-yellow-400 mr-1">👍</span>
+                  <p className=" text-gray-300  text-[14px]  rounded-[11px] p-3 bg-[#222534] mb-3">
+                    <span className=" mr-1">👍</span>
                     EventHex stands out by tackling two key challenges that
                     traditional event management often struggles with: creating
                     personalized experiences and ensuring attendee retention.
@@ -467,7 +467,7 @@ const EventDetailsPage = () => {
 
                 {/* Content */}
                 <div className="mb-4">
-                  <p className="text-gray-300  bg-[#222534] mb-3">
+                  <p className="text-gray-300  p-3 text-[14px] rounded-[11px] bg-[#222534] mb-3">
                     <span className="text-yellow-400 mr-1">👍</span>
                     EventHex stands out by tackling two key challenges that
                     traditional event management often struggles with: creating
