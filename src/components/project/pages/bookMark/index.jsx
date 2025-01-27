@@ -9,7 +9,7 @@ import {
   Nosession,
   Bookmarknotfilled,
   Share,
-  Heart
+  Heart,
 } from "../../../../assets";
 import Button from "../../../button";
 
@@ -93,9 +93,7 @@ const Sessions = () => {
             style={{ fontSize: "16px", fontWeight: "600" }}
             className="text-[#FFFFFF] py-4  gap-[8px] flex"
           >
-       
             <span>
-            
               <img src={Bookmarknotfilled} alt="" />{" "}
             </span>
             Book marks
@@ -107,12 +105,15 @@ const Sessions = () => {
               events.map((event) => (
                 <div
                   key={event.id}
-                  className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-3"
+                  className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-2"
                 >
                   {/* Event Header */}
                   <div className="flex justify-between items-center flex-wrap gap-2">
                     <div className="flex gap-2   justify-center items-center md:gap-3 flex-wrap">
-              <Calendar className='w-[16px]' style={{color:'CDD0D5'}}  />
+                      <Calendar
+                        className="w-[16px]"
+                        style={{ color: "CDD0D5" }}
+                      />
                       <span className="text-gray-300 text-xs md:text-sm">
                         {event.date}
                       </span>
@@ -128,17 +129,17 @@ const Sessions = () => {
                   </div>
 
                   {/* Event Title */}
-                  <div className="border-b border-dotted border-gray-500 pb-3">
-                    <p
-                      style={{ fontSize: "16px" }}
-                      className="text-gray-300 text-sm md:text-base font-medium"
-                    >
-                      {event.title}
-                    </p>
-                  </div>
+                  <div className="border-b border-dotted border-gray-500 pb-1">
+                  <p
+                    style={{ fontSize: "16px" }}
+                    className="text-white  text-[16px]  font-[500]"
+                  >
+                    {event.title}
+                  </p>
+                </div>
 
                   {/* Attendees and Time */}
-                  <div className="w-full text-white flex items-center justify-between flex-wrap gap-3">
+                  <div className="w-full  text-white flex items-center justify-between flex-wrap gap-3">
                     <div className="flex items-center">
                       <div className="flex bg-[#F6F8FA] rounded-full p-[1px] -space-x-2">
                         {event.attendees.map((attendee) => (
@@ -153,15 +154,15 @@ const Sessions = () => {
                             />
                           </div>
                         ))}
-                        <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#F6F8FA] border-2 text-xs md:text-sm text-gray-700">
+                        <div className="flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#F6F8FA] border-2  text-xs md:text-sm text-gray-700">
                           +{event.additionalAttendees}
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-center text-gray-400 gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span className="text-xs md:text-sm">
+                      <Clock className="w-4 h-4  text-[#F6F8FA]" />
+                      <span className="text-[12px] font-[400]">
                         {event.timeSlot}
                       </span>
                       <img
@@ -222,7 +223,11 @@ const Sessions = () => {
             </div>
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-1 text-cyan-500">
-                <img className="w-[20px] h-[19px]" src={Heart} alt="hearticon" />
+                <img
+                  className="w-[20px] h-[19px]"
+                  src={Heart}
+                  alt="hearticon"
+                />
                 <span>{takeawayContent.likes}</span>
               </div>
               <div className="flex   items-center gap-3">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Calendar, Clock } from "lucide-react";
-import { Profile, Banner,  Time, Bookmark } from "../../../../assets";
+import { Profile, Banner, Time, Bookmark } from "../../../../assets";
 import Button from "../../../button";
 
 const EventDetailsPage = () => {
@@ -17,7 +17,7 @@ const EventDetailsPage = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Transcripted'
+      buttonName: "Transcripted",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const EventDetailsPage = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Loading'
+      buttonName: "Loading",
     },
     {
       id: 3,
@@ -45,8 +45,9 @@ const EventDetailsPage = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Loading'
-    },{
+      buttonName: "Loading",
+    },
+    {
       id: 4,
       date: "15 Aug 2024",
       stage: "Stage 02",
@@ -58,7 +59,7 @@ const EventDetailsPage = () => {
         { id: 3, imageUrl: Profile },
       ],
       additionalAttendees: 2,
-      buttonName: 'Loading'
+      buttonName: "Loading",
     },
     // ... other events
   ];
@@ -67,7 +68,7 @@ const EventDetailsPage = () => {
     <div className="bg-gray-900 w-full min-h-screen px-4 md:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto flex flex-col ">
         {/* Header */}
-        <div  className="p-4 flex items-center   gap-[6px] w-full">
+        <div className="p-4 flex items-center   gap-[6px] w-full">
           <div className="w-[48px] h-[48px]   md:w-14 md:h-14 rounded-full overflow-hidden flex-shrink-0">
             <img
               src={Profile}
@@ -76,13 +77,18 @@ const EventDetailsPage = () => {
             />
           </div>
           <div className="flex-grow">
-            <p  style={{fontSize:'12px'}} className=" md:text-base text-gray-300">Welcome Back</p>
-            <h3 style={{fontSize:'16px',fontWeight:'600'}}  className=" font-bold text-gray-100">
+            <p
+              className="  text-[12px] md:text-base text-gray-300"
+            >
+              Welcome Back
+            </p>
+            <h3
+              className="  text-[16px] font-[600]  text-gray-100"
+            >
               Ahmed Zidane ! 🤟🏻
             </h3>
           </div>
         </div>
-
         {/* Banner */}
         <div className="w-full ">
           <img
@@ -94,7 +100,9 @@ const EventDetailsPage = () => {
 
         {/* Event Section */}
         <div className="w-full flex flex-col ] ">
-          <p   style={{fontSize:'16px',fontWeight:'500'}}  className= "py-3   text-[#FFFFFF] ">
+          <p
+            className="py-3  text-[16px] font-[500]  text-[#FFFFFF] "
+          >
             Latest Updated
           </p>
 
@@ -103,26 +111,36 @@ const EventDetailsPage = () => {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-3"
+                className="flex bg-[#282C3A] rounded-[16px] p-4 flex-col gap-2"
               >
                 {/* Event Header */}
                 <div className="flex justify-between items-center flex-wrap gap-2">
                   <div className="flex gap-2   justify-center items-center md:gap-3 flex-wrap">
-                               <Calendar className='w-[16px]' style={{color:'CDD0D5'}}  />
-                               <span className="  text-gray-300 text-xs md:text-sm">{event.date}</span>
-                               <div className='w-[1px] h-[15px] bg-[#CDD0D5]'/>
-                               <span className="text-gray-300 text-xs md:text-sm">{event.stage}</span>
-                             </div>
-                  <Button 
-                    btnName={event.buttonName} 
-                    img={Time} 
-                    className="border text-black bg-slate-50 items-center p-1 flex rounded-md text-xs md:text-sm" 
+                    <Calendar
+                      className="w-[16px]"
+                      style={{ color: "CDD0D5" }}
+                    />
+                    <span className="  text-gray-300 text-xs md:text-sm">
+                      {event.date}
+                    </span>
+                    <div className="w-[1px] h-[15px] bg-[#CDD0D5]" />
+                    <span className="text-gray-300 text-xs md:text-sm">
+                      {event.stage}
+                    </span>
+                  </div>
+                  <Button
+                    btnName={event.buttonName}
+                    img={Time}
+                    className="border text-black bg-slate-50 items-center p-1 flex rounded-md text-xs md:text-sm"
                   />
                 </div>
 
                 {/* Event Title */}
-                <div className="border-b border-dotted border-gray-500 pb-3">
-                  <p   style={{fontSize:'16px'}} className="text-gray-300 text-sm md:text-base font-medium">
+                <div className="border-b border-dotted border-gray-500 pb-1">
+                  <p
+                    style={{ fontSize: "16px" }}
+                    className="text-white  text-[16px]  font-[500]"
+                  >
                     {event.title}
                   </p>
                 </div>
@@ -150,9 +168,13 @@ const EventDetailsPage = () => {
                   </div>
 
                   <div className="flex items-center text-gray-400 gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-xs md:text-sm">{event.timeSlot}</span>
-                    <img src={Bookmark} alt="bookmark" className="w-[24px] h-[24px]" />
+                    <Clock className="w-4 h-4  text-[#F6F8FA]" />
+                    <span className="text-[12px] font-[400]">{event.timeSlot}</span>
+                    <img
+                      src={Bookmark}
+                      alt="bookmark"
+                      className="w-[24px] h-[24px]"
+                    />
                   </div>
                 </div>
               </div>

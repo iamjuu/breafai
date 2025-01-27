@@ -48,7 +48,6 @@ const EventDetailsPage = () => {
     "personalized experiences and ensuring attendee retention. This",
   ];
 
-  // Separate arrays for Overview and Take Away
   const overviewContent = [
     {
       name: "Overview",
@@ -59,16 +58,11 @@ const EventDetailsPage = () => {
             <span>
               <img className="w-[26px]" src={OverView} alt="" />
             </span>{" "}
-            <p   className=" text-[16px] font-medium " 
-        >
-              Overview
-            </p>
+            <p className=" text-[16px] font-medium ">Overview</p>
           </div>
           <div className="bg-[#282C3A] p-3  rounded-lg max-w-lg">
             <div className="p-3">
-              <p
-                className="text-[#CDD0D5] mb-5 leading-[18px] text-[14px] font-[400]"
-              >
+              <p className="text-[#CDD0D5] mb-5 leading-[18px] text-[14px] font-[400]">
                 EventHex stands out by tackling two key challenges that
                 traditional event management often struggles with: creating
                 personalized experiences and ensuring attendee retention. This
@@ -113,21 +107,9 @@ const EventDetailsPage = () => {
       name: "Overview",
       content: (
         <>
-          <div className="flex  py-4 gap-[8px]">
-            {" "}
-            <span>
-              <img className="w-[26px]" src={OverView} alt="" />
-            </span>{" "}
-            <p   className=" text-[16px] font-medium " 
-        >
-              Overview
-            </p>
-          </div>
           <div className="bg-[#282C3A] p-3  rounded-lg max-w-lg">
             <div className="p-3">
-              <p
-                className="text-[#CDD0D5] mb-5 leading-[18px] text-[14px] font-[400]"
-              >
+              <p className="text-[#CDD0D5] mb-5 leading-[18px] text-[14px] font-[400]">
                 EventHex stands out by tackling two key challenges that
                 traditional event management often struggles with: creating
                 personalized experiences and ensuring attendee retention. This
@@ -180,9 +162,7 @@ const EventDetailsPage = () => {
               <span>
                 <img className="w-[26px]" src={Takeaway} alt="" />
               </span>
-              <p   className="text-[16px] font-[500]">
-                Ai Generated Insights
-              </p>
+              <p className="text-[16px] font-[500]">Ai Generated Insights</p>
             </div>
 
             <Button
@@ -193,13 +173,9 @@ const EventDetailsPage = () => {
               }
             />
           </div>
-          <div
-            className="   bg-[#282C3A] rounded-[16px] p-4 mb-20"
-          >
+          <div className="   bg-[#282C3A] rounded-[16px] p-4 mb-20">
             <div className=" flex justify-center">
-              <h2
-                className="text-white  text-[17px] font-[600] mb-3 flex items-center gap-2"
-              >
+              <h2 className="text-white  text-[17px] font-[600] mb-3 flex items-center gap-2">
                 👉 Cross-Border Payment Innovations Creating Key Challenges
               </h2>
             </div>
@@ -211,30 +187,18 @@ const EventDetailsPage = () => {
               platform is built
             </p>
             <div className="flex flex-wrap gap-2   mb-4">
-              <div
-                className=" rounded-[7px]  flex justify-center items-center bg-gray-900  "
-              >
-                <span
-                  className=" text-[12px] font-[400] text-white p-2"
-                >
+              <div className=" rounded-[7px]  flex justify-center items-center bg-gray-900  ">
+                <span className=" text-[12px] font-[400] text-white p-2">
                   #AIGen
                 </span>
               </div>
-              <div
-                className=" rounded-[7px]  flex justify-center items-center bg-gray-900 "
-              >
-                <span
-                  className="text-[12px] font-[400] text-white p-2"
-                >
+              <div className=" rounded-[7px]  flex justify-center items-center bg-gray-900 ">
+                <span className="text-[12px] font-[400] text-white p-2">
                   #Prediction
                 </span>
               </div>
-              <div
-                className=" rounded-[7px]  flex justify-center items-center bg-gray-900  "
-              >
-                <span
-                  className="text-[12px] font-[400] text-white p-2"
-                >
+              <div className=" rounded-[7px]  flex justify-center items-center bg-gray-900  ">
+                <span className="text-[12px] font-[400] text-white p-2">
                   #Strategy
                 </span>
               </div>
@@ -257,8 +221,6 @@ const EventDetailsPage = () => {
         </>
       ),
     },
-    
-   
   ];
 
   const socialContent = [
@@ -526,14 +488,10 @@ const EventDetailsPage = () => {
                 ></div>
               </div>
               <div>
-                <h2
-                  className=" text-black text-[14px]  font-semibold"
-                >
+                <h2 className=" text-black text-[14px]  font-semibold">
                   Safari Sanders Dennyes
                 </h2>
-                <p
-                  className="text-black text-[12px] opacity-90"
-                >
+                <p className="text-black text-[12px] opacity-90">
                   AI Research Director, Tecnosys
                 </p>
               </div>
@@ -541,20 +499,14 @@ const EventDetailsPage = () => {
 
             <div className="flex items-center  justify-between gap-2  ">
               <div className="flex  gap-[4px]  items-center ">
-                <Calendar
-                  className=" text-black  font-[100] w-[16px] h-[16px]"
-                />
-                <span
-                  className="   text-[12px] text-black text-sm"
-                >
+                <Calendar className=" text-black  font-[100] w-[16px] h-[16px]" />
+                <span className="   text-[12px] text-black text-sm">
                   Jan 17, 2025
                 </span>
                 <div className="w-[1px] h-4 bg-black" />
                 <div className="flex items-center ">
                   <Clock className=" text-black w-4 h-4" />
-                  <span  className=" text-[12px] text-black ">
-                    45 min
-                  </span>
+                  <span className=" text-[12px] text-black ">45 min</span>
                 </div>
               </div>
 
@@ -576,9 +528,7 @@ const EventDetailsPage = () => {
           >
             <div className="flex flex-col justify-center items-center gap-2">
               <img className="w-[36px] h-[36px]" src={Calander} alt="" />
-              <span  className="text-[14px]">
-                Overview
-              </span>
+              <span className="text-[14px]">Overview</span>
             </div>
           </button>
           <button
@@ -587,9 +537,7 @@ const EventDetailsPage = () => {
           >
             <div className="flex flex-col items-center gap-2">
               <img className="w-[36px] h-[36px]" src={Chat} alt="" />
-              <span  className="text-[ 14px]">
-                Take Away
-              </span>
+              <span className="text-[ 14px]">Take Away</span>
             </div>
           </button>
           <button
@@ -598,9 +546,7 @@ const EventDetailsPage = () => {
           >
             <div className="flex flex-col items-center gap-2">
               <img className="w-[36px] h-[36px]" src={Chat1} alt="" />
-              <span  className="text-[14px]">
-                Social
-              </span>
+              <span className="text-[14px]">Social</span>
             </div>
           </button>
           <button
@@ -609,9 +555,7 @@ const EventDetailsPage = () => {
           >
             <div className="flex flex-col   items-center gap-2">
               <img className="w-[36px] h-[36px]" src={Folder} alt="" />
-              <span  className="text-[14px]">
-                Resources
-              </span>
+              <span className="text-[14px]">Resources</span>
             </div>
           </button>
         </div>
