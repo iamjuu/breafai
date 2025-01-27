@@ -76,14 +76,14 @@ const Sessions = () => {
           <button
             style={{ fontSize: "14px" }}
             onClick={() => setActiveTab("takeAway")}
-            className={`flex  pb-2 items-center gap-[2px] ${
+            className={`flex    justify-center  items-center gap-[2px] ${
               activeTab === "sessions"
                 ? "text-gray-500 "
                 : "text-blue-400  border-b-2 border-blue-500"
             }`}
           >
             <div className="w-[38px]  flex  justify-center h-[38px]">
-              <img className="w-[25px]" src={Chat} alt="" />
+              <img className="w-[31px] h-[29px]" src={Chat} alt="" />
             </div>
             Take Away
           </button>
