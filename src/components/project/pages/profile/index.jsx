@@ -29,14 +29,13 @@ const ProfilePage = () => {
         {/* Profile Info */}
         <div   className="w-full   md:w-2/3 lg:w-1/2 mt-4 text-center">
           <h2 style={{fontSize:'14px', fontWeight:'500'}} className=" font-inter font-semibold">Emma Wrights</h2>
-          <div  style={{lineHeight:'13px'}} className="flex flex-col  ">
+          <div  style={{lineHeight:'13px'}} className="flex flex-col   ">
 
           <p  style={{fontSize:'12px'}} className="text-[#E2E4E9]">Product Head</p>
           <p style={{fontSize:'12px'}} className=" text-[#E2E4E9]">George Digital Solutions</p>
           </div>
         </div>
       </div>
-
       {/* Contact Info Section */}
       <div className="flex-1    mb-56  pl-10 pt-5 md:p-6">
         <div className="max-w-md mx-auto space-y-4">          
